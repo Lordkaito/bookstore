@@ -9,6 +9,6 @@ function Main() {
       <AddBook />
     </>
   );
-};
+}
 
 export default Main;

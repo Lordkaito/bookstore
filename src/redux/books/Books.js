@@ -26,12 +26,11 @@ const Books = () => {
       pages: 300,
       currentChapter: 3,
     },
-  ]
+  ];
 
   return (
     <div>
-      {books.map((book) => {
-        return (
+      {books.map((book) => (
           <div className='container'>
             <div className='bookContainer'>
               <div className='bookInfo'>
@@ -60,8 +59,7 @@ const Books = () => {
               <p>Update Progress</p>
             </div>
           </div>
-        )
-      })}
+      ))}
     </div>
   );
 };

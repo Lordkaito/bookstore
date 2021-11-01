@@ -19,15 +19,13 @@ const Navbar = () => {
         <p>Here goes my logo</p>
       </div>
       <ul className='navbarLinks home'>
-        {links.map((link) => {
-          return (
+        {links.map((link) => (
             <li>
               <NavLink to={link.path} exact>
                 {link.name}
               </NavLink>
             </li>
-          );
-        })}
+        ))}
         <div className='iconContainer'>
           <p className='icon'>
             Here goes an icon
