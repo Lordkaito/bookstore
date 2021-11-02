@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Book = (props) => {
-  console.log(props.booksProps);
   return (
     // <h1>{props.booksProps[0].title}</h1>
     <div>
