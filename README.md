@@ -12,7 +12,7 @@ This project is meant to be build using React and Redux.
 - CSS
 ## Live Demo
 
-[Live Demo Link](https://rr-book-app.netlify.app/)
+[Live Demo Link](https://jovial-hugle-fa2557.netlify.app/)
 
 ## To get a local copy run the following steps:
 - Copy this link [this link](https://github.com/Lordkaito/bookstore.git)
