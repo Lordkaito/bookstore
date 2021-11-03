@@ -1,33 +1,21 @@
-import React from 'react';
+import AddBook from './AddBook';
+import Book from './Books';
 
-const Book = (props) => {
+const Books = (prop) => {
+  const { data } = prop;
+
   return (
-    // <h1>{props.booksProps[0].title}</h1>
-    <div>
-      {props.booksProps.map((book) => {
-        return (
-          <div className='book' key={book.id}>
-            <div className='bookInfo'>
-              <p>{book.gender}</p>
-              <p>{book.title}</p>
-              <p>{book.author}</p>
-              <div className='actions'>
-                <p>Comments</p>
-                <button>Remove</button>
-                <button>Edit</button>
-              </div>
-            </div>
-            <div className='completedPercentage'>
-              <p>Completed: {book.completed}</p>
-            </div>
-            <div className='updateInfo'>
-              <p>Current chapter: {book.currentChapter}</p>
-              <button>Update</button>
-            </div>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div className="books-container d-flex">
+        <div>
+          {data.map((book) => (
+            <Book key={book.id} title={book.title} author={book.author} id={book.id} />
+          ))}
+        </div>
+      </div>
+      <AddBook />
+    </>
   );
 };
-export default Book;
+
+export default Books;

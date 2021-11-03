@@ -1,42 +1,21 @@
-import React from 'react';
-import Book from './Book';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
-const Books = () => {
-  const books = [
-    {
-      title: 'My first title',
-      gender: 'My gender',
-      author: 'My author',
-      completed: '30%',
-      pages: 100,
-      currentChapter: 2,
-      id: 1,
-    },
-    {
-      title: 'My second title',
-      gender: 'My second gender',
-      author: 'My second author',
-      completed: '40%',
-      pages: 200,
-      currentChapter: 1,
-      id: 2,
-    },
-    {
-      title: 'My third title',
-      gender: 'My third gender',
-      author: 'My thiird author',
-      completed: '99%',
-      pages: 300,
-      currentChapter: 3,
-      id: 3,
-    },
-  ];
-
+const Book = (prop) => {
+  const { title, author, id } = prop;
+  const dispatch = useDispatch();
+  const removeBookFromStore = (id) => {
+    dispatch(removeBook(id));
+  };
   return (
     <div>
-      <Book booksProps={books}/>
+      Title: {title}
+      <br />
+      Author: {author}
+      <br />
+      <button type="button" onClick={() => removeBookFromStore(id)}>Delete</button>
     </div>
   );
 };
 
-export default Books;
+export default Book;
