@@ -9,8 +9,10 @@ const Book = (prop) => {
   };
   return (
     <div>
-      {title}
-      {author}
+      Title: {title}
+      <br />
+      Author: {author}
+      <br />
       <button type="button" onClick={() => removeBookFromStore(id)}>Delete</button>
     </div>
   );
