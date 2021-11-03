@@ -1,39 +1,20 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
-  const links = [
-    {
-      name: 'Books',
-      path: '/',
-    },
-    {
-      name: 'Categories',
-      path: '/categories',
-    },
-  ];
-
-  return (
-    <nav className='navbar'>
-      <div className='logo'>
-        <p>Here goes my logo</p>
-      </div>
-      <ul className='navbarLinks home'>
-        {links.map((link) => (
-            <li>
-              <NavLink to={link.path} exact>
-                {link.name}
-              </NavLink>
-            </li>
-        ))}
-        <div className='iconContainer'>
-          <p className='icon'>
-            Here goes an icon
-          </p>
-        </div>
+const Navbar = () => (
+  <>
+    <nav className="navigation-bar d-flex">
+      <h2>Bookstore</h2>
+      <ul className="d-flex">
+        <li>
+          <Link to="/"> BOOKS </Link>
+        </li>
+        <li>
+          <Link to="/categories"> CATEGORIES </Link>
+        </li>
       </ul>
     </nav>
-  );
-};
+  </>
+);
 
 export default Navbar;
