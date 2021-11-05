@@ -1,19 +1,20 @@
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { bookRemove } from '../redux/books/books';
 
 const Book = (prop) => {
-  const { title, author, id } = prop;
+  const { book } = prop;
+  const [id, [{ title, category }]] = book;
   const dispatch = useDispatch();
   const removeBookFromStore = (id) => {
-    dispatch(removeBook(id));
+    dispatch(bookRemove(id));
   };
   return (
     <div>
       Title: {title}
       <br />
-      Author: {author}
+      Category: {category}
       <br />
-      <button type="button" onClick={() => removeBookFromStore(id)}>Delete</button>
+      <button type="submit" onClick={() => removeBookFromStore(id)}>Delete</button>
     </div>
   );
 };
