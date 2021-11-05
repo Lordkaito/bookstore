@@ -26,6 +26,7 @@ const AddBook = () => {
         type="text"
         name="title"
         id="title"
+        autoFocus
         onChange={(e) => setTitle(e.target.value)}
         value={title}
         placeholder="Book Title"
