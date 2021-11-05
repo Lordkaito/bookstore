@@ -1,18 +1,21 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { getBooks } from '../redux/books/books';
 import AddBook from './AddBook';
 import Book from './Books';
 
-const Books = (prop) => {
-  const { data } = prop;
+const Books = () => {
+  const dispatch = useDispatch();
+  const { booksReducer } = useSelector((state) => state);
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
 
   return (
     <>
-      <div className="books-container d-flex">
-        <div>
-          {data.map((book) => (
-            <Book key={book.id} title={book.title} author={book.author} id={book.id} />
-          ))}
-        </div>
-      </div>
+      {booksReducer.map((book) => {
+        return <Book key={book[0]} book={book} />;
+      })}
       <AddBook />
     </>
   );
