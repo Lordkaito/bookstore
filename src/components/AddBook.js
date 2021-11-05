@@ -21,29 +21,34 @@ const AddBook = () => {
   };
 
   return (
-    <form onSubmit={submitBookToStore} className="form-container">
-      <input
-        type="text"
-        name="title"
-        id="title"
-        autoFocus
-        onChange={(e) => setTitle(e.target.value)}
-        value={title}
-        placeholder="Book Title"
-      />
-      <select onChange={(e) => setCategory(e.target.value)}
-      name="categories"
-      id="booksCats">
-        <option disabled={true} value="default">Select a category</option>
-        <option value="Action">Action</option>
-        <option value="Manga">Manga</option>
-        <option value="Science Fiction">Science Fiction</option>
-        <option value="Heroes">Heroes</option>
-        <option value="Drama">Drama</option>
-        <option value="Horror">Horror</option>
-      </select>
-      <button type="submit">Add Books</button>
-    </form>
+    <div className='addBookContainer'>
+      <div className='formContainer'>
+        <h2>Add a new book</h2>
+        <form onSubmit={submitBookToStore} className="form-container">
+          <input
+            type="text"
+            name="title"
+            id="title"
+            autoFocus
+            onChange={(e) => setTitle(e.target.value)}
+            value={title}
+            placeholder="Book Title"
+          />
+          <select onChange={(e) => setCategory(e.target.value)}
+            name="categories"
+            id="booksCats">
+            <option disabled={true} value="default">Select a category</option>
+            <option value="Action">Action</option>
+            <option value="Manga">Manga</option>
+            <option value="Science Fiction">Science Fiction</option>
+            <option value="Heroes">Heroes</option>
+            <option value="Drama">Drama</option>
+            <option value="Horror">Horror</option>
+          </select>
+          <button type="submit">Add Books</button>
+        </form>
+      </div>
+    </div>
   );
 };
 
