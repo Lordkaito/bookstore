@@ -1,112 +1,103 @@
+:root {
+  --azure: #0290ff;
+  --white: #fff;
+  --black: #121212;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
+  border: none;
   padding: 0;
-  border: 0;
-  font-family:
-    'Trebuchet MS',
-    'Lucida Sans Unicode',
-    'Lucida Grande',
-    'Lucida Sans',
-    Arial,
-    sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-html,
-body,
-#root {
-  height: 100%;
+.navContainer {
+  width: 100%;
+  height: 5.938rem;
+  /* margin: 1.438rem 6.188rem 1.688rem 6.25rem; */
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  max-width: 100vw;
+}
+
+.navContainer h2 {
+  margin: 0 2.938rem 0.125rem 0;
+  font-size: 1.875rem;
+  color: var(--azure);
+}
+
+.linksUl {
+  display: flex;
+  align-items: center;
+  gap: 2.563rem;
+  list-style: none;
+}
+
+.linksUl a {
+  color: var(--black);
+  text-decoration: none;
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  width: 100%;
-  gap: 10rem;
 }
 
-.navContainer {
-  display: flex;
-  align-items: center;
-  width: 87.5rem;
-  height: 5.938rem;
-  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
-  background-color: #fff;
+.iconContainer {
+  width: 2.813rem;
+  height: 2.813rem;
+  padding: 0.875rem;
+  border: solid 1px var(--white);
 }
 
 .main-container {
-  background-color: #fafafa;
-  height: 650px;
-  overflow: auto;
-}
-
-h2 {
-  color: #0290ff;
-}
-
-ul {
+  max-width: 100vw;
+  max-height: 100vh;
+  height: 34rem;
   display: flex;
-  gap: 2rem;
-  margin: 0 2rem;
-}
-
-li {
-  list-style: none;
-}
-
-.link {
-  width: 3.688rem;
-  height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
-  font-size: 1rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.9px;
-  text-decoration: none;
-}
-
-.icon {
-  margin: 0 1rem;
-  font-size: 2.063rem;
-  cursor: pointer;
-  padding: 0.2rem;
-  border: 1px solid grey;
-  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
 }
 
 .flexInfo {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 2rem;
-  background-color: #fff;
+  height: 33%;
+  max-height: 100%;
 }
 
 .bookInfo {
-  margin: 2rem 20rem 2rem 1rem;
-  border: 1px solid white;
-}
-
-p {
-  margin: 0.25rem 0;
+  width: 18.625rem;
+  padding: 2rem 1.688rem 1.75rem 1.688rem;
+  margin-right: 18.625rem;
 }
 
 .category {
-  font-size: 0.8rem;
-  color: grey;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--black);
 }
 
 .title {
-  font-size: 1.2rem;
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-size: 1.375rem;
   font-weight: bold;
+  letter-spacing: -0.2px;
+  color: var(--black);
 }
 
 .author {
-  font-size: 0.8rem;
+  /* width: 6.688rem; */
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
   color: #4386bf;
-  font-weight: lighter;
 }
 
 .utility {
@@ -114,63 +105,70 @@ p {
   align-items: center;
 }
 
-.comments,
-.remove,
-.edit {
-  padding: 0 1.063rem;
+.comments, .remove, .edit {
+  margin-right: 1.0625rem;
+  padding-right: 1.0625rem;
+  border-right: 1px solid lightgrey;
   cursor: pointer;
-  margin: 0;
-  border-right: 1px solid grey;
   color: #4386bf;
 }
 
-.remove {
-  background-color: transparent;
-  font-size: 1rem;
-}
-
-.remove:hover,
 .comments:hover,
+.remove:hover,
 .edit:hover {
   color: #0290ff;
+}
+
+.CircularProgressbar {
+  height: 4.25rem;
+  width: 4.25rem;
 }
 
 .progressInfo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1.31rem;
-  border-right: 2px solid lightgrey;
-  padding-right: 8rem;
-}
-
-.progress-bar {
-  height: 4rem;
-  width: 4rem;
-  min-height: 4rem;
-  min-width: 4rem;
+  gap: 1.313rem;
 }
 
 .textPercentage {
-  font-size: 1.3rem;
+  font-size: 2rem;
+  color: var(--black-two);
+  border-right: 1px solid lightgrey;
+}
+
+.completed {
+  margin: 0.438rem 4.938rem 0.75rem 0;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  color: var(--black);
 }
 
 .chapterInfo {
-  padding: 1.688rem;
-  margin: 2rem;
+  margin-left: 3.688rem;
+  margin-right: 9.188rem;
 }
 
 .currentChap {
-  color: grey;
-  font-size: 0.8rem;
+  width: 7.875rem;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  color: var(--black-two);
+}
+
+.chapter {
+  width: 4.688rem;
+  margin: 0.438rem 0 0.25rem 0;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
 }
 
 .update {
-  background-color: #0290ff;
-  padding: 0.5rem;
+  width: 11.5rem;
+  height: 2.063rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
+  background-color: var(--azure);
   color: #fff;
-  font-weight: lighter;
   cursor: pointer;
 }
 
@@ -179,69 +177,54 @@ p {
 }
 
 .addBookContainer {
-  position: fixed;
-  bottom: 0;
-  background-color: #fafafa;
-  width: 100%;
-}
-
-.formContainer {
+  height: 300px;
+  padding-left: 6.25rem;
+  padding-top: 1.813rem;
   border-top: 1px solid lightgrey;
-  margin: 0 20rem;
-  text-align: center;
-  padding: 1rem;
   background-color: #fafafa;
-  height: 180px;
 }
 
 .formContainer h2 {
-  text-align: left;
-  color: gray;
+  color: #888;
+  margin-bottom: 1.188rem;
+}
+
+#title {
+  width: 41.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0 0;
+  padding: 0.813rem 0 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: #fff;
+  outline: none;
 }
 
 .form-container {
   display: flex;
 }
 
-input,
-select,
-button {
-  padding: 0.5rem;
-  font-size: 0.8rem;
-  outline: none;
-}
-
-.formContainer input {
-  width: 41.5rem;
-  height: 2.813rem;
-  margin: 1.188rem 2.125rem 0 0;
-  padding: 0.813rem 1.063rem 0.813rem 1.063rem;
-  border-radius: 4px;
-  border: solid 1px var(--white);
-  background-color: #fff;
-}
-
-.formContainer select {
+#booksCats {
   width: 17.813rem;
   height: 2.813rem;
   margin: 1.188rem 2.125rem 0;
   padding: 0.375rem 0.938rem 0.563rem 1rem;
   border-radius: 4px;
-  border: solid 1px #fff;
+  border: solid 1px var(--white);
   background-color: #fff;
 }
 
-.formContainer button {
+.addBook {
   width: 11.5rem;
   height: 2.813rem;
   margin: 1.188rem 0 0 2.125rem;
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
+  background-color: var(--azure);
   color: #fff;
-  background-color: #0290ff;
   cursor: pointer;
 }
 
-.formContainer button:hover {
+.addBook:hover {
   background-color: #4386bf;
 }

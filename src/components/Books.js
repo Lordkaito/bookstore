@@ -21,8 +21,8 @@ const Book = (prop) => {
         </div>
         <div className='utility'>
           <p className='comments'>Comments</p>
-          <button className='remove'
-          type='submit' onClick={() => removeBookFromStore(id)}>Remove</button>
+          <p className='remove'
+          onClick={() => removeBookFromStore(id)}>Remove</p>
           <p className='edit'>Edit</p>
         </div>
       </div>
@@ -34,13 +34,13 @@ const Book = (prop) => {
           />
           <div className='textPercentage'>
             <p>{percentage}%</p>
-            <p>Completed</p>
+            <p className='completed'>Completed</p>
           </div>
         </div>
       </div>
       <div className='chapterInfo'>
         <p className='currentChap'>CURRENT CHAPTER</p>
-        <p>Chapter 17</p>
+        <p className='chapter'>Chapter 17</p>
         <button class='update'>UPDATE PROGRESS</button>
       </div>
     </div>
