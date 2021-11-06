@@ -13,9 +13,11 @@ const Books = () => {
 
   return (
     <>
+    <div className='main-container'>
       {booksReducer.map((book) => {
         return <Book key={book[0]} book={book} />;
       })}
+    </div>
       <AddBook />
     </>
   );
