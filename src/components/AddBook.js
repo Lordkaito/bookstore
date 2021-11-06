@@ -37,7 +37,7 @@ const AddBook = () => {
           <select onChange={(e) => setCategory(e.target.value)}
             name="categories"
             id="booksCats">
-            <option disabled={true} value="default">Select a category</option>
+            <option disabled={true}value="default">Select a category</option>
             <option value="Action">Action</option>
             <option value="Manga">Manga</option>
             <option value="Science Fiction">Science Fiction</option>
@@ -45,7 +45,7 @@ const AddBook = () => {
             <option value="Drama">Drama</option>
             <option value="Horror">Horror</option>
           </select>
-          <button className='addBook' type="submit">Add Book</button>
+          <button className='addBook' type="submit">ADD BOOK</button>
         </form>
       </div>
     </div>

@@ -43,12 +43,13 @@
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  max-width: 1602px;
 }
 
 .iconContainer {
-  width: 2.813rem;
   height: 2.813rem;
-  padding: 0.875rem;
+  padding: 0.875rem 0;
   border: solid 1px var(--white);
 }
 
@@ -92,7 +93,6 @@
 }
 
 .author {
-  /* width: 6.688rem; */
   height: 1.188rem;
   margin: 0.25rem 0 0;
   font-size: 0.875rem;
@@ -185,6 +185,10 @@
   background-color: #fafafa;
 }
 
+.formContainer {
+  max-width: 1500px;
+}
+
 .formContainer h2 {
   color: #888;
   margin-bottom: 1.188rem;
@@ -203,6 +207,8 @@
 
 .form-container {
   display: flex;
+  max-width: 1500px;
+  justify-content: space-between;
 }
 
 #booksCats {
